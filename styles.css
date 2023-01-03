@@ -55,13 +55,19 @@ a {
   display: none;
 }
 header {
-  background-color: var(--yellow-color);
   font-family: var(--font-sohne500);
   padding-block: 12px;
   border-bottom: 1px solid var(--darkgray-btn-border);
   position: fixed;
   width: 100%;
   z-index: 1;
+  transition: all 0.3s linear;
+}
+.bg-yellow {
+  background-color: var(--yellow-color);
+}
+.bg-white {
+  background-color: white;
 }
 .header-background {
   background-color: white;
@@ -82,10 +88,8 @@ header {
   font-size: 14px;
   margin-right: 25px;
 }
-.navbar-wrapper .flex-center button {
-  background-color: var(--darkgray-btn-border);
+.header-btn {
   color: white;
-  border: 1px solid var(--darkgray-btn-border);
   padding-inline: 16px;
   padding-top: 7px;
   padding-bottom: 9px;
@@ -94,17 +98,15 @@ header {
   line-height: 20px;
   cursor: pointer;
 }
-#start-btn {
-  background: rgb(26, 137, 23);
-  color: white;
+.gray-btn {
+  background-color: var(--darkgray-btn-border);
+  border: 1px solid var(--darkgray-btn-border);
+  transition: all 0.3s linear;
+}
+.green-btn {
+  background-color: rgb(26, 137, 23);
   border: 1px solid rgb(26, 137, 23);
-  padding-inline: 16px;
-  padding-top: 7px;
-  padding-bottom: 9px;
-  border-radius: 20px;
-  font-size: 14px;
-  line-height: 20px;
-  cursor: pointer;
+  transition: all 0.3s linear;
 }
 .navbar-wrapper .flex-center button:hover {
   background-color: rgb(8, 8, 8);

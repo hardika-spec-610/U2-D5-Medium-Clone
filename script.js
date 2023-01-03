@@ -10,21 +10,27 @@
 //     console.log("array", array);
 //   }
 // }
+let header = document.querySelector("header");
+let button = document.getElementById("header-btn");
+console.log("button", button);
 function scrollHeader() {
   document.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    const button = document.getElementById("start-btn");
-    console.log("header", header);
-    console.log("header", button);
-    if (window.scrollY > 0) {
-      header.classList.add("display");
-      header.classList.remove("display");
-      header.classList.add("header-background");
-      button.classList.add("start-btn");
+    let scrollPosition = window.scrollY;
+    if (scrollPosition >= 370) {
+      header.classList.add("bg-white");
+      header.classList.remove("bg-yellow");
+      button.classList.remove("gray-btn");
+      button.classList.add("green-btn");
+    }
+    if (scrollPosition < 370) {
+      header.classList.remove("bg-white");
+      header.classList.add("bg-yellow");
+      button.classList.remove("green-btn");
+      button.classList.add("gray-btn");
     }
   });
 }
 window.onload = function () {
   // svgAriaLable();
-  // scrollHeader();
+  scrollHeader();
 };
