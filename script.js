@@ -1,18 +1,20 @@
-// function svgAriaLable(e) {
-//   let svgImg = document.getElementsByTagName("svg")[0].children;
-//   //   svgImg.getAttribute("aria-label");
-//   console.log("svg", svgImg);
-//   for (let child of svgImg) {
-//     // console.log("child", child.lastElementChild);
-//     let array = [];
-//     array = child.lastElementChild.getAttribute("aria-label");
+function svgAriaLable() {
+  let svgImg = document.getElementById("mmSvg");
+  // console.log("svg", svgImg);
+  let svgDoc = svgImg.contentDocument;
+  // console.log("svg doc", svgDoc);
+  let mouth = svgDoc.querySelectorAll("svg>g>g>g");
+  // console.log("ariaLableM", mouth);
+  let random = Math.floor(Math.random() * mouth.length); // toggle.length = 560
+  let random0or1 = Math.floor(Math.random() * 2);
+  mouth[random].style.opacity = random0or1;
+}
+function toggler() {
+  setInterval(svgAriaLable, 70);
+}
 
-//     console.log("array", array);
-//   }
-// }
 let header = document.querySelector("header");
 let button = document.getElementById("header-btn");
-console.log("button", button);
 function scrollHeader() {
   document.addEventListener("scroll", () => {
     let scrollPosition = window.scrollY;
@@ -31,6 +33,6 @@ function scrollHeader() {
   });
 }
 window.onload = function () {
-  // svgAriaLable();
+  toggler();
   scrollHeader();
 };

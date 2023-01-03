@@ -51,9 +51,6 @@ a {
   background-color: var(--yellow-color);
   height: 75px;
 }
-.display {
-  display: none;
-}
 header {
   font-family: var(--font-sohne500);
   padding-block: 12px;
