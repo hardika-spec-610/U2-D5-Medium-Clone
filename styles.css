@@ -276,6 +276,10 @@ header {
   width: 100%;
   padding-left: 5em;
 }
+.right-lable-tag div {
+  position: sticky;
+  top: 107px;
+}
 .right-img-block a img {
   width: 200px;
   height: 135px;
